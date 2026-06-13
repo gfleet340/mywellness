@@ -1,0 +1,31 @@
+Objective : Build a responsive website using HTML and CSS (bootstrap) on “My Wellness Website”
+Requirement 1 – Every page should have master menu to navigate any page
+Requirement 2 – CSS should be applied on every page
+Requirement 3 – Site should be responsive to adjust the size according to screen
+Requirement 4 – There should be footer to have contact information along with designer as Nirvan Rathi
+Requirement 5 – Place all used picture in “images” directory 
+Requirement 6 – all CSS should be placed in “stylesheet” directory 
+There should be at least 4 pages –
+1. Home Page (index.html) – This page should have following  section with appropriate icon and picture
+• Title: “My Wellness Website” 
+• Introduction to your topic – Stress Management
+
+2. About the Issue (about.html) – Use headings, paragraphs, and lists on this page to make it more attractive and use icon and picture  
+ • Explain topic “Stress Management” 
+• Causes and effects of stress
+3. Solutions & Tips (solutions.html) – use picture and icon accordingly
+• At least 6 helpful tips – It should be running on a banner one by one
+• Daily habits for emotional balance for stress management
+• Motivational quote Reflection – Multiple quotes running one by one
+• Your feelings about this topic 
+• How you manage your emotions
+4. Contact Us (contact.html) – use appropriate picture and icon for this page. There should be form to submit feedback. The form should have Name, emailed, and phone number along with 250 chat length comment box. Mail should be sent to rathinirvan@gmail.com with subject “Feedback - <Name of person>”
+* Form to submit feedback and mail to rathinirvan@gmai.com 
+Important points – Following CSS should be applied on this website
+* Apply CSS to make your website attractive: 
+* Background color or gradient – take orange theme 
+* Font styles and colors 
+* Borders and spacing 
+* Navigation bar styling 
+* Hover effects (optional) Submission Guidelines
+

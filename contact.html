@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="stylesheet/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="bi bi-sunrise me-2"></i>My Wellness Website</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About the Issue</a></li>
+            <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions & Tips</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-5">
+              <p class="eyebrow"><i class="bi bi-envelope-paper-heart me-2"></i>Contact Us</p>
+              <h1>Send Feedback</h1>
+              <p class="lead">Share your thoughts about the wellness website. The form opens an email addressed to Nirvan Rathi with a feedback subject.</p>
+              <img class="page-image mt-3" src="images/contact-feedback.png" alt="Feedback envelope and wellness message illustration">
+            </div>
+            <div class="col-lg-7">
+              <div class="info-card">
+                <form id="feedbackForm">
+                  <div class="mb-3">
+                    <label class="form-label" for="name">Name</label>
+                    <input class="form-control" id="name" name="name" type="text" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" id="email" name="email" type="email" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="phone">Phone Number</label>
+                    <input class="form-control" id="phone" name="phone" type="tel" required>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label" for="comment">Comment</label>
+                    <textarea class="form-control" id="comment" name="comment" maxlength="250" rows="5" required></textarea>
+                    <div class="form-text"><span id="count">0</span>/250 characters</div>
+                  </div>
+                  <button class="btn btn-wellness" type="submit"><i class="bi bi-send me-2"></i>Submit Feedback</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container d-md-flex justify-content-between align-items-center">
+        <p class="mb-2 mb-md-0"><i class="bi bi-envelope me-2"></i>Contact: <a href="mailto:rathinirvan@gmail.com">rathinirvan@gmail.com</a></p>
+        <p class="mb-0">Designed by Nirvan Rathi</p>
+      </div>
+    </footer>
+
+    <script>
+      const form = document.getElementById("feedbackForm");
+      const comment = document.getElementById("comment");
+      const count = document.getElementById("count");
+
+      comment.addEventListener("input", () => {
+        count.textContent = comment.value.length;
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const message = comment.value.trim();
+        const subject = `Feedback - ${name}`;
+        const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nComment: ${message}`;
+        window.location.href = `mailto:rathinirvan@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
